@@ -119,7 +119,8 @@ class MainActivity : AppCompatActivity() {
                                 calculateFourOperation(" + ")
                                 if (isAvailPlusK) {
                                     binding.tvK.visibility = View.VISIBLE
-                                    numberK = formatStringToDouble(binding.numberCurrent.text.toString())
+                                    numberK =
+                                        formatStringToDouble(binding.numberCurrent.text.toString())
                                 } else {
                                     binding.tvK.visibility = View.INVISIBLE
                                 }
@@ -229,7 +230,10 @@ class MainActivity : AppCompatActivity() {
     private fun onNumberButtonClick(number: String, isHistory: Boolean = false) {
         var currentValue: String = binding.numberCurrent.text.toString()
         if (currentValue.replace(",", "").replace(".", "").length < 14) {
-            currentValue = if (currentValue == "0" || isFourOperationButtonClicked || isOtherOperationButtonClicked || isEqualButtonClicked || isHistory) number else StringBuilder().append(currentValue).append(number).toString()
+            currentValue =
+                if (currentValue == "0" || isFourOperationButtonClicked || isOtherOperationButtonClicked || isEqualButtonClicked || isHistory) number else StringBuilder().append(
+                    currentValue
+                ).append(number).toString()
 
             try {
                 currentNumber = formatStringToDouble(currentValue)
@@ -396,12 +400,16 @@ class MainActivity : AppCompatActivity() {
 
         if (isOtherOperationButtonClicked) {
             isOtherOperationButtonClicked = false
-            if (isEqualButtonClicked) historyText = StringBuilder().append(historyText).append(currentOperation).append(formatDoubleToString(currentNumber)).toString()
+            if (isEqualButtonClicked) historyText =
+                StringBuilder().append(historyText).append(currentOperation)
+                    .append(formatDoubleToString(currentNumber)).toString()
         } else {
-            historyText = StringBuilder().append(historyText).append(currentOperation).append(formatDoubleToString(currentNumber)).toString()
+            historyText = StringBuilder().append(historyText).append(currentOperation)
+                .append(formatDoubleToString(currentNumber)).toString()
         }
 
-        return StringBuilder().append(historyText).append(" = ").append(formatDoubleToString(currentResult)).toString()
+        return StringBuilder().append(historyText).append(" = ")
+            .append(formatDoubleToString(currentResult)).toString()
     }
 
     // 검정색 버튼 - 기능 미구현 색상, 글자 크기 변경
@@ -441,7 +449,8 @@ class MainActivity : AppCompatActivity() {
         binding.numberCurrent.text = formatDoubleToString(thisOperationNumber)
         // resultList.add(thisOperationNumber)
 
-        if (isEqualButtonClicked) currentResult = thisOperationNumber else currentNumber = thisOperationNumber
+        if (isEqualButtonClicked) currentResult = thisOperationNumber else currentNumber =
+            thisOperationNumber
 
         isOtherOperationButtonClicked = true
         isFourOperationButtonClicked = false
