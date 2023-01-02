@@ -28,35 +28,35 @@
 
         <RadioGroup
             android:id="@+id/rg_rounding"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            android:padding="-4dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_margin="2dp"
-            android:layout_marginStart="48dp">
+            android:layout_marginStart="48dp"
+            android:orientation="horizontal"
+            android:padding="-4dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8">
 
-        <RadioButton
-            android:checked="true"
-            android:id="@+id/rb_rounding_f"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-6dp"
-            android:text="F" />
+            <RadioButton
+                android:id="@+id/rb_rounding_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-6dp"
+                android:checked="true"
+                android:text="F" />
 
-        <RadioButton
-            android:id="@+id/rb_rounding_cut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-6dp"
-            android:text="CUT" />
+            <RadioButton
+                android:id="@+id/rb_rounding_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-6dp"
+                android:text="CUT" />
 
-        <RadioButton
-            android:id="@+id/rb_rounding_fi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5/4" />
+            <RadioButton
+                android:id="@+id/rb_rounding_fi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5/4" />
         </RadioGroup>
 
 
@@ -64,10 +64,10 @@
             android:id="@+id/rg_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
+            android:layout_marginStart="-40dp"
             android:orientation="horizontal"
-            android:layout_marginStart="-40dp">
+            android:scaleX="0.8"
+            android:scaleY="0.8">
 
             <RadioButton
                 android:id="@+id/rb_count_4"
@@ -86,24 +86,27 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2" />
+
             <RadioButton
                 android:id="@+id/rb_count_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1" />
+
             <RadioButton
                 android:id="@+id/rb_count_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0" />
+
             <RadioButton
-                android:checked="true"
                 android:id="@+id/rb_count_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:layout_gravity="center"
-                android:text="ADD2" />
+                android:checked="true"
+                android:text="ADD2"
+                android:textSize="12sp" />
         </RadioGroup>
 
     </LinearLayout>
@@ -560,75 +563,75 @@
 
             <TextView
                 android:id="@+id/tv_m"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
+                android:layout_margin="4dp"
+                android:text="M"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="M"/>
-            
+                android:visibility="invisible" />
+
             <TextView
                 android:id="@+id/tv_gt"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
+                android:layout_margin="4dp"
+                android:text="GT"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="GT"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_k"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:visibility="invisible"
+                android:layout_margin="4dp"
+                android:text="K"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="K"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_plus"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:gravity="end"
+                android:text="+"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:gravity="end"
-                android:visibility="invisible"
-                android:text="+"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_minus"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="-"
                 android:textSize="20sp"
-                android:visibility="invisible"
                 android:textStyle="bold"
-                android:text="-"/>
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/tv_mul"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="×"
                 android:textSize="20sp"
-                android:visibility="invisible"
                 android:textStyle="bold"
-                android:text="×"/>
+                android:visibility="invisible" />
 
 
             <TextView
                 android:id="@+id/tv_div"
-                android:layout_margin="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="÷"
                 android:textSize="20sp"
-                android:visibility="invisible"
                 android:textStyle="bold"
-                android:text="÷"/>
+                android:visibility="invisible" />
         </LinearLayout>
 
         <TextView
